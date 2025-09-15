@@ -33,3 +33,8 @@ WHERE `level` = 'magistrale';
 /_Da quanti dipartimenti è composta l'università? (12)_/
 SELECT \*
 FROM `departments`
+
+/_Quanti sono gli insegnanti che non hanno un numero di telefono? (50)_/
+SELECT \*
+FROM `teachers`
+WHERE `phone` IS NULL
