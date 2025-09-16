@@ -65,4 +65,4 @@ GROUP BY `department_id`
 SELECT students.id, students.name, students.surname
 FROM `students`
 JOIN degrees ON students.degree_id = degrees.id
-WHERE degrees.name = 'economia';
+WHERE degrees.name = "Corso di Laurea in Economia";
