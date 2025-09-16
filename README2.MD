@@ -11,7 +11,7 @@ WHERE `cfu` > 10;
 /_Selezionare tutti gli studenti che hanno più di 30 anni_/
 SELECT \*
 FROM `students`
-WHERE `date_of_birth` < CURDATE() - INTERVAL 30 YEAR;
+WHERE timestampdiff(YEARS, `date_of_birth`, CURDATE()) > 30;
 
 /_Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di
 laurea (286)_/
@@ -38,3 +38,5 @@ FROM `departments`
 SELECT \*
 FROM `teachers`
 WHERE `phone` IS NULL
+
+**GROUP BY**
