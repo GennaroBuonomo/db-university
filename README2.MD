@@ -54,3 +54,8 @@ GROUP BY `office_address`
 SELECT avg(`vote`) AS `average_grades`, `exam_id`
 FROM `exam_student`
 GROUP BY `exam_id`
+
+/_Contare quanti corsi di laurea ci sono per ogni dipartimento_/
+SELECT count(\*) AS `num_courses`, `department_id`
+FROM `degrees`
+GROUP BY `department_id`
