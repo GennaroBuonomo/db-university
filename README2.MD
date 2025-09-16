@@ -46,3 +46,6 @@ FROM `students`
 GROUP BY `year`
 
 /_Contare gli insegnanti che hanno l'ufficio nello stesso edificio_/
+SELECT count(\*) AS `number_of_teachers`, `office_address`
+FROM `teachers`
+GROUP BY `office_address`
