@@ -49,3 +49,8 @@ GROUP BY `year`
 SELECT count(\*) AS `number_of_teachers`, `office_address`
 FROM `teachers`
 GROUP BY `office_address`
+
+/_Calcolare la media dei voti di ogni appello d'esame_/
+SELECT avg(`vote`) AS `average_grades`, `exam_id`
+FROM `exam_student`
+GROUP BY `exam_id`
