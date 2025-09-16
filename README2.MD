@@ -40,3 +40,9 @@ FROM `teachers`
 WHERE `phone` IS NULL
 
 **GROUP BY**
+/_Contare quanti iscritti ci sono stati ogni anno_/
+SELECT count(\*) AS `subscriber_count`, year(`enrolment_date`) AS `year`
+FROM `students`
+GROUP BY `year`
+
+/_Contare gli insegnanti che hanno l'ufficio nello stesso edificio_/
