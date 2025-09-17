@@ -82,3 +82,12 @@ SELECT `courses`.\*
 FROM `courses`
 JOIN `course_teacher` ON `course_teacher`.`course_id` = `courses`.`id`
 WHERE `course_teacher`.`teacher_id` = 44;
+
+/_ Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui
+sono iscritti e il relativo dipartimento, in ordine alfabetico per cognome e
+nome_/
+SELECT `students`.`surname`, `students`.`name`, `students`.`enrolment_date`, `students`.`registration_number`, `degrees`.`name` AS `degrees_name`, `departments`.`name` AS `departments_name`
+FROM `students`
+JOIN `degrees` ON `degrees`.`id` = `students`.`degree_id`
+JOIN `departments` ON `departments`.`id` = `degrees`.`department_id`
+GROUP BY `students`.`surname`, `students`.`name`
