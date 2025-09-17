@@ -68,7 +68,11 @@ JOIN degrees ON students.degree*id = degrees.id
 WHERE degrees.name = "Corso di Laurea in Economia";
 /\_Selezionare tutti i Corsi di Laurea Magistrale del Dipartimento di
 Neuroscienze*/
-SELECT degrees.id, degrees.name, degrees.level
+
+/_ Selezionare tutti i Corsi di Laurea Magistrale del Dipartimento di
+Neuroscienze_/
+SELECT `degrees`.`name`
 FROM `degrees`
-JOIN departments ON degrees.department_id = departments.id
-WHERE degrees.level = "magistrale" AND departments.name LIKE "%Neuroscienze%";
+JOIN `departments` ON `departments`.`id` = `degrees`.`department_id`
+WHERE `departments`.`name` = "Dipartimento di Neuroscienze"
+AND `degrees`.`level` = "magistrale";
